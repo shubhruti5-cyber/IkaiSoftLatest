@@ -1,0 +1,264 @@
+﻿<style>
+    .swal-custom {
+        font-size: 1.1rem; /* bigger text */
+        border-radius: 12px; /* smoother look */
+    }
+</style>
+<section class="bd-live-class-area theme-bg-05 section-space position-relative">
+    <div class="bd-live-class-shape-wrapper d-none d-lg-block">
+        <div class="bd-live-class-shape-01 d-none d-xl-block">
+            <img src="~/assets/images/shape/art-shape.webp" alt="image">
+        </div>
+
+        <div class="bd-live-class-shape-03">
+            <img src="~/assets/images/shape/book-shape.webp" alt="image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row g-30 align-items-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="bd-live-class-wrapper style-one">
+                    <div class="bd-live-class-section-wrapper text-center">
+                        <div class="bd-section-title-wrapper">
+                            <span class="bd-section-subtitle">Live & Learn</span>
+                            <h2 class="bd-section-title mb-20">
+                                Contact Us
+                            </h2>
+
+                        </div>
+
+                    </div>
+                </div>
+                <p class="text-center pt-5">
+                    Let’s shape the future together! Whether you have ideas, questions, or dreams, connect with Ikaisoft and turn possibilities into meaningful opportunities.<br />
+                </p>
+            </div>
+            @*  <div class="col-xl-5 col-lg-6">
+                <div class="bd-live-class-thumb-wrapper style-one">
+                    <div class="bd-live-class-thumb" > 
+                        <img src="~/assets/images/banner/banner-1/ikaisoft-banner-image.png" alt="image">
+                    </div>
+                </div>
+            </div> *@
+        </div>
+    </div>
+</section>
+<section class="bd-contact-form-area section-space">
+    <div class="container">
+        <div class="row gy-30 justify-content-between align-items-center">
+            <div class="col-xl-6 col-lg-6">
+                <div class="bd-contact-form-wrapper">
+                    <div class="bd-section-title-wrapper section-title-space" style="margin-top: 38px;">
+                        <h2 class="bd-section-title mb-20">Get in touch</h2>
+                        <p class="bd-section-paragraph">Our friendly team would love to hear from you.</p>
+                    </div>
+                    <div class="bd-contact-form">
+                        <form method="post" id="contactForm">
+                            <div class="row gy-30">
+                                <!-- Full Name Field -->
+                                <div class="col-md-12">
+                                    <div class="form-input-box">
+                                        <div class="form-input-title">
+                                            <label for="firstName">Full Name<span>*</span></label>
+                                        </div>
+                                        <div class="form-input">
+                                            <input name="Name" id="Name" type="text"
+                                                   placeholder="First Name" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email Address Field -->
+                                <div class="col-md-12">
+                                    <div class="form-input-box">
+                                        <div class="form-input-title">
+                                            <label for="emailAddress">Email Address<span>*</span></label>
+                                        </div>
+                                        <div class="form-input">
+                                            <input name="Email" id="Email" type="email"
+                                                   placeholder="Email Address" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Subject Field -->
+                                <div class="col-md-12">
+                                    <div class="form-input-box">
+                                        <div class="form-input-title">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                        <div class="form-input">
+                                            <input name="Subject" id="Subject" type="text"
+                                                   placeholder="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Message Field -->
+                                <div class="col-xxl-12">
+                                    <div class="form-input-box mb-15">
+                                        <div class="form-input-title">
+                                            <label for="message">Message<span>*</span></label>
+                                        </div>
+                                        <div class="form-input">
+                                            <textarea id="Message" name="Message" placeholder="Message"
+                                                      required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-option">
+                                        <input id="course-check-1" type="checkbox">
+                                        <label for="course-check-1">
+                                            You agree to our friendly
+                                            <span class="text-border-highlights">
+                                                <a asp-controller="Home" asp-action="PrivacyPolicy">privacy policy</a>
+                                                <span class="theme-black h-1px bottom-0"></span>
+                                            </span>.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-xxl-12">
+                                    <div class="bd-contact-form-btn">
+                                        <button class="bd-btn btn-primary w-100" type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="bd-contact-form-thumb">
+                    <img src="~/assets/images/contact/Ikai_Contact.png"
+                         alt="images">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bd-contact-address-area section-space primary-bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8">
+                <div class="bd-section-title-wrapper section-title-space text-center">
+                    <span class="bd-section-subtitle">Locations</span>
+                    <h2 class="bd-section-title mb-20">Our Global Offices</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-30">
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="bd-contact-address-box">
+                    <div class="icon">
+                        <i class="fa-light fa-map-marker-alt"></i>
+                    </div>
+                    <div class="content">
+                        <h6 class="title">India Office</h6>
+                        <p>Lucknow , Uttar Pradesh</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="bd-contact-address-box">
+                    <div class="icon">
+                        <i class="fa-light fa-phone"></i>
+                    </div>
+                    <div class="content">
+                        <h6 class="title">Call Us</h6>
+                        <p>(+91) 9369-9279-76</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="bd-contact-address-box">
+                    <div class="icon">
+                        <i class="fa-light fa-envelope"></i>
+                    </div>
+                    <div class="content">
+                        <h6 class="title">Email Us</h6>
+                        <p>
+                            <a href="/cdn-cgi/l/email-protection#41282f272e012832353425386f222e2c">
+                                <span class="__cf_email__"
+                                      data-cfemail="7c15121a133c150f08091805521f1311">info@ikaisoft.com</span>
+                            </a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="bd-contact-address-box">
+                    <div class="icon">
+                        <i class="fa-light fa-globe"></i>
+                    </div>
+                    <div class="content">
+                        <h6 class="title">Visit Our Website</h6>
+                        <p><a href="https://www.ikaisoft.com" target="_blank">www.ikaisoft.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bd-contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.627537719791!2d81.0503837!3d26.851796500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2496846a6ed%3A0x125a5ffab9061e23!2sAmity%20University%20Lucknow%20Campus!5e0!3m2!1sen!2sin!4v1756139224384!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts {
+    <script>
+        $("#contactForm").submit(function (e) {
+            e.preventDefault();
+            if ($("#Name").val().trim() === "" ||
+                $("#Email").val().trim() === "" ||
+                $("#Message").val().trim() === "") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Missing Fields',
+                    text: '⚠️ Please fill out all required fields before submitting.'
+                });
+                return;
+            }
+            if (!$("#course-check-1").is(":checked")) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Please Accept Terms',
+                    text: '⚠️ Please read and accept our privacy policy before submitting.',
+                    confirmButtonText: 'OK'
+                });
+                return;
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Home/Contact",
+                data: $(this).serialize(),
+                success: function (res) {
+                    if (res.success) {
+                        Swal.fire({
+                               icon: 'success',
+        title: 'Success!',
+        text: 'Your request has been submitted successfully. We will contact you shortly.',
+        width: '40rem',        // increase popup size
+        padding: '2em',        // more breathing space
+        showConfirmButton: false,
+         timer: 4000,
+        customClass: {
+            popup: 'swal-custom'
+        }
+                        });
+                        $("#contactForm")[0].reset();
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error!',
+                            text: res.message
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ikaisoft</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/logo/ikaisoft-mainlogo.png">
+    <link rel="stylesheet" href="~/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/nouislider.min.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/icomoon.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/apexcharts.css">
+    <link rel="stylesheet" href="~/assets/css/main.css">
+</head>
+<body>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="bd-preloader-content">
+                    <div class="bd-preloader-logo">
+                        <div class="bd-preloader-circle">
+                            <svg width="250" height="250" viewBox="0 0 380 380" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <circle stroke="#F5F5F5" cx="190" cy="190" r="180" stroke-width="6"
+                                        stroke-linecap="round"></circle>
+                                <circle stroke="red" cx="190" cy="190" r="180" stroke-width="6" stroke-linecap="round">
+                                </circle>
+                            </svg>
+                        </div>
+                        <img src="~/assets/images/logo/ikaisoft-mainlogo.png" alt="" style="width: 150px; height: 150px;">
+                    </div>
+                    <p class="bd-preloader-subtitle">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="bd-header-top style-three">
+            <div class="bd-header-top-left">
+                <ul>
+                    <li>
+                        <a href="tel:+8884467880">
+                            <span>
+                                <i class="icon icon-call-ring"></i>
+                            </span>(+91) 9369-9279-76
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cdn-cgi/l/email-protection#57322f363a273b32173e242322332e7934383a">
+                            <span>
+                                <i class="icon icon-envelope-b"></i>
+                            </span>
+                            <span class="__cf_email__"
+                                  data-cfemail="87e2ffe6eaf7ebe2c7eef4f3f2e3fea9e4e8ea">info@ikaisoft.com</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bd-header-top-right text-md-end">
+                <ul b-rusatt5pyj="" class="social-icon-list">
+                    <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-facebook-f"></i></a></li>
+                    <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-x-twitter"></i></a></li>
+                    <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bd-header-area header-style-one" id="header-sticky">
+            <div class="bd-header-inner">
+                <div class="bd-header-left">
+                    <div class="bd-header-logo">
+                        <a asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/images/logo/ikaisoft-logo-1.png"
+                                 alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="bd-header-menu">
+                    <nav class="main-menu bd-mobile-menu-active d-none d-xl-block">
+                        <ul>
+                            <li>
+                                <a class="nomenu" asp-controller="Home" asp-action="Index">Home</a>
+
+                            </li>
+                            <li class="has-mega-menu ">
+                                <a href="javascript:void(0)">Our Edge</a>
+                                <ul class="mega-menu mega-grid-3 ">
+                                    <li>
+                                        <a href="javasript:void(0);" class="title text-primary">
+                                            <i class="icon icon-university"></i> Program & Courses
+                                        </a>
+                                        <ul>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="JobProgram">Job-Oriented Courses</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="OfflineTraining">Instructor-Led Training</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="Courses">Self-Paced Learning</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javasript:void(0);" class="title text-primary"><i class="icon icon-open-book"></i> Exam Prep</a>
+                                        <ul>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="PlacementAssistance">Placement Assistance</a>
+                                            </li>
+
+                                            <li>
+                                                <a asp-controller="Home" asp-action="IndustryPatnership">Practice Test & Study Material</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="CareerCounseling">AI-Powered Quizzes</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javasript:void(0);" class="title text-primary"><i class="icon icon-expert-trainers"></i> Career Support</a>
+                                        <ul>
+
+                                            <li>
+                                                <a asp-controller="Home" asp-action="CareerCounseling">Career Counseling</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="MockDrives">Mock Interviews & Drives</a>
+                                            </li>
+                                            <li>
+                                                <a asp-controller="Home" asp-action="PracticalTest">partnership and integration</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+                          
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">IT Solutions</a>
+                                <ul class="submenu last-children">
+
+                                    <li>
+                                        <a asp-controller="Home" asp-action="SoftwareDevelopment">Software Development</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="CustomProjects">Custom Projects</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="Consultation">Assessment Suite</a>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">Resources</a>
+                                <ul class="submenu last-children">
+                                    <li>
+                                        <a href="student-profile.html">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="student-my-quiz-attempts.html">Discuss</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="javascript:void(0)">Know us</a>
+                                <ul class="submenu last-children">
+                                    <li>
+                                        <a asp-controller="Home" asp-action="AboutUs">About us</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="Home" asp-action="Contact">Contact Us</a>
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div class="bd-header-right">
+                    <div class="bd-header-sign-btn">
+                        <a class="bd-btn btn-outline-primary h-40px" asp-controller="Home" asp-action="Signup">Sign Up</a>
+                        <a class="bd-btn btn-outline-border-primary h-40px" asp-controller="Home" asp-action="Contact">
+                            Contact us
+                        </a>
+                    </div>
+                    <div class="bd-header-hamburger">
+                        <div class="sidebar-toggle">
+                            <a class="bar-icon" href="javascript:void(0)">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="fix">
+        <div class="bd-offcanvas-area">
+            <div class="bd-offcanvas-wrapper">
+                <div class="bd-offcanvas-content">
+                    <div class="bd-offcanvas-top d-flex justify-content-between align-items-center mb-30">
+                        <div class="bd-offcanvas-logo">
+                            <a href="index.html">
+                                <img src="~/assets/images/logo/ikaisoft-logo-1.png"
+                                     alt="logo">
+                            </a>
+                        </div>
+                        <div class="bd-offcanvas-close">
+                            <button class="bd-offcanvas-close-icon animation--flip">
+                                <span class="bd-offcanvas-m-lines">
+                                    <span class="bd-offcanvas-m-line line--1"></span><span class="bd-offcanvas-m-line line--2"></span><span class="bd-offcanvas-m-line line--3"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bd-mobile-menu-smaller">
+                        <div class="bd-offcanvas-menu mb-30">
+                            <nav></nav>
+                        </div>
+                    </div>
+                    <div class="bd-offcanvas-btn-wrap mb-30">
+                        <h4 class="bd-offcanvas-title-meta">Account</h4>
+                        <div class="bd-offcanvas-btn d-flex align-items-center gap-30">
+                            <a class="bd-btn btn-outline-primary h-40px" asp-controller="Home" asp-action="Signup">Sign Up</a>
+                            <a class="bd-btn btn-outline-border-primary h-40px" asp-controller="Home" asp-action="Signup">
+                                Request a Consultation
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bd-offcanvas-social">
+                        <h4 class="bd-offcanvas-title-meta">Follow Us</h4>
+                        <div class="theme-social">
+                            <ul b-rusatt5pyj="" class="social-icon-list">
+                                <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-facebook-f"></i></a></li>
+                                <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-x-twitter"></i></a></li>
+                                <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li b-rusatt5pyj=""><a b-rusatt5pyj="" href="#"><i b-rusatt5pyj="" class="fa-brands fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bd-offcanvas-overlay"></div>
+    <div class="bd-offcanvas-overlay-white"></div>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+  
+    <footer>
+        <div class="bd-footer-area style-two has-footer-space theme-black fix">
+            <div class="container">
+                <div class="row gy-30 justify-content-between">
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="bd-footer-widget footer-2-col-1">
+                            <div class="bd-footer-widget-logo">
+                                <a href="index.html">
+                                    <img src="~/assets/images/logo/ikaisoft-logo-2.png" alt="image">
+                                </a>
+                            </div>
+                            <div class="bd-footer-widget-content">
+                                <p class="bd-footer-widget-description">
+                                    An education-focused website is a vital tool for showcasing programs, services, and
+                                    learning opportunities.
+                                </p>
+                                <div class="bd-footer-social">
+                                    <div class="theme-social has-white">
+                                        <ul class="social-icon-list">
+                                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4">
+                        <div class="bd-footer-widget footer-2-col-2">
+                            <h6 class="bd-footer-widget-title ">Links</h6>
+                            <div class="bd-footer-widget-links">
+                                <ul>
+                                    <li class="underline-two"><a asp-controller="Home" asp-action="AboutUs">About Us</a></li>
+                                    <li class="underline-two"><a href="blog.html">News</a></li>
+                                    <li class="underline-two"><a href="event.html">Event</a></li>
+                                    <li class="underline-two"><a href="shop.html">Shop</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4">
+                        <div class="bd-footer-widget footer-2-col-3">
+                            <h6 class="bd-footer-widget-title ">Class</h6>
+                            <div class="bd-footer-widget-links">
+                                <ul>
+                                    <li class="underline-two"><a href="courses.html">Courses</a></li>
+                                    <li class="underline-two"><a href="instructor.html">Instructor</a></li>
+                                    <li class="underline-two"><a href="instructor-details.html">Instructor Details</a></li>
+                                    <li class="underline-two"><a href="become-instructor.html">Become Instructor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-4">
+                        <div class="bd-footer-widget footer-2-col-4">
+                            <h6 class="bd-footer-widget-title ">Support</h6>
+                            <div class="bd-footer-widget-links">
+                                <ul>
+                                    <li class="underline-two"><a href="contact.html">Contact Now</a></li>
+                                    <li class="underline-two"><a href="faq.html">FAQ</a></li>
+                                    <li class="underline-two"><a href="terms-conditions.html">Terms Conditions</a></li>
+                                    <li class="underline-two"><a href="privacy-policy.html">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-sm-12">
+                        <h6 class="bd-footer-widget-title">Contact Us</h6>
+                        <div class="bd-footer-widget-content" style="color: #fff;">
+                            <div class="bd-footer-widget-contact-item has-white">
+                                <span>Address:</span> <a href="#">Luckow , Uttar Pradesh, India</a>
+                            </div>
+
+                            <div class="bd-footer-widget-contact-item has-white">
+                                <span>Phone:</span> <a href="tel:123456789">(+91) 9369-9279-76</a>
+                            </div>
+                            <div class="bd-footer-widget-contact-item has-white">
+                                <span>Email:</span> <a href="mailto:info@example.com">info@ikaisoft.com</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bd-footer-copyright-area style-two theme-bg fix bd-noise-bg">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-12">
+                        <div class="bd-footer-copyright-text text-center">
+                            <p class="underline-two">
+                                © Copyright <span id="year">2025</span> | Developed By ikaisoft. All rights reserved.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="backtotop-wrap cursor-pointer">
+        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <script src="~/assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="~/assets/js/plugins/waypoints.min.js"></script>
+    <script src="~/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/plugins/swiper.min.js"></script>
+    <script src="~/assets/js/plugins/wow.js"></script>
+    <script src="~/assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="~/assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="~/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/js/plugins/nice-select.min.js"></script>
+    <script src="~/assets/js/vendor/ajax-form.js"></script>
+    <script src="~/assets/js/vendor/purecounter.js"></script>
+    <script src="~/assets/js/plugins/nouislider.min.js"></script>
+    <script src="~/assets/js/plugins/typed.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/plugins/swal.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<style>
+    .countdown-item {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 15px 20px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.4);
+    }
+</style>
+<section class="bd-coming-soon-area bd-coming-soon-bg d-flex align-items-center justify-content-center" data-background="@Url.Content("~/assets/images/bg/coming-soon.webp")">
+    <div class="container">
+        <div class="row text-center justify-content-center">
+            <div class="bd-coming-soon-content">
+                <div class="bd-coming-soon-logo">
+                    <a asp-controller="Home" asp-action="Index"><img src="~/assets/images/logo/ikaisoft-mainlogo.png" alt="logo" style="width: 100px;"></a>
+                    <p>STAY TUNED</p>
+                </div>
+                <h1 class="bd-coming-soon-title">Coming Soon...</h1>
+                <p class="bd-coming-soon-subtitle">The future is loading – a groundbreaking decentralized experience is just around the corner!</p>
+                <div class="bd-countdown mb-30" id="countdown2"></div>
+                <div class="bd-coming-soon-form">
+                    <form action="#">
+                        <input type="email" placeholder="Email address">
+                        <button class="bd-btn btn-primary" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function startCountdown(duration, elementId) {
+        const countdownElement = document.getElementById(elementId);
+        let endTime = new Date().getTime() + duration;
+
+        setInterval(function () {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+
+            if (distance < 0) {
+                countdownElement.innerHTML = "EXPIRED";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `
+                <div class="countdown-item">${days}d</div>
+                <div class="countdown-item">${hours}h</div>
+                <div class="countdown-item">${minutes}m</div>
+                <div class="countdown-item">${seconds}s</div>`;
+        }, 1000);
+    }
+
+    // 2 days 12 hours 60 minutes 60 seconds in milliseconds
+    const countdownDuration = ((30 * 24 * 60 * 60) + (12 * 60 * 60) + (60 * 60) + 60) * 1000;
+    startCountdown(countdownDuration, "countdown2");
+</script>
