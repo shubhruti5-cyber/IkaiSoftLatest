@@ -1,0 +1,479 @@
+﻿@{
+    Layout = null;
+}
+
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Courses Lesson</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/logo/favicon.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="~/assets/images/logo/ikaisoft-mainlogo.png">
+    <link rel="stylesheet" href="~/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="~/assets/css/plugins/nouislider.min.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/icomoon.css">
+    <link rel="stylesheet" href="~/assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="~/assets/css/main.css">
+    <link href="~/assets/js/monaco/vs/editor/editor.main.css" rel="stylesheet" />
+
+    <style>
+        .bd-course-curriculum-content .title.active {
+            color: #07A169 !important;
+            font-weight: bold;
+        }
+    </style>
+    <style>
+       
+        .ikai-code-block {
+            position: relative;
+            background: #282c34;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #07A169;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #editor {
+            height: 400px;
+            border: 1px solid #ccc;
+        }
+
+        #resultFrame {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            border: none;
+            background: #07A169;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+            button:hover {
+                background: #45a049;
+            }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <section class="bd-lesson-area p-relative">
+            <div class="bd-lesson-wrapper">
+                <div class="bd-lesson-content">
+                    <div class="bd-lesson-logo text-center">
+                        <a href="index.html"><img src="~/assets/images/logo/ikaisoft-logo-1.png" alt="logo" width="70%"></a>
+                    </div>
+                    <h2 class="title">Course Content</h2>
+                    <div class="accordion-common-style accordion-transparent">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span>Q.</span> HTML Basics
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a onclick="loadLesson(1)" data-lesson="1" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">Introduction to HTML</p>
+                                            </div>
+                                        </a>
+                                        <a onclick="loadLesson(2)" data-lesson="2" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">Getting Started</p>
+                                            </div>
+                                        </a>
+                                        <a onclick="loadLesson(3)" data-lesson="3" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Elements</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span>Q.</span> Building Your First Web Page
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a onclick="loadLesson(4)" data-lesson="4" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Attributes</p>
+                                            </div>
+                                        </a>
+                                        <a onclick="loadLesson(5)" data-lesson="5" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Styles</p>
+                                            </div>
+                                        </a>
+                                        <a onclick="loadLesson(6)" data-lesson="6" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Colors</p>
+                                            </div>
+                                        </a>
+                                        <a onclick="loadLesson(7)" data-lesson="7" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Links</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <span>Q.</span> JavaScript Basics
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a onclick="loadLesson(4)" data-lesson="4" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Images</p>
+                                            </div>
+                                        </a>
+                                        <a onclick="loadLesson(5)" data-lesson="5" href="javascript:void(0)" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <p class="title">HTML Meta Tags</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Section 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <span>Q.</span> JavaScript DOM Manipulation
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Selecting and modifying elements</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">16:20</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Event handling in JavaScript</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">11:45</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Section 5 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <span>Q.</span> Advanced JavaScript: ES6+
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Arrow functions and template literals</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">12:00</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Modules, classes, and inheritance</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">13:25</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Section 6 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <span>Q.</span> React Basics
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Introduction to React components</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">18:50</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">State management in React</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">16:40</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Section 7 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                        <span>Q.</span> Full-Stack Development with Node.js
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Building REST APIs with Express</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">20:10</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="bd-course-curriculum-content d-flex-between">
+                                            <div class="bd-course-curriculum-info d-flex-items gap-10">
+                                                <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                                <p class="title">Connecting to MongoDB using Mongoose</p>
+                                            </div>
+                                            <div class="bd-course-curriculum-meta d-flex-items gap-10">
+                                                <span class="duration">22:35</span>
+                                                <span class="status"><i class="fa-solid fa-lock"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-offcanvas-overlay"></div>
+                <div class="bd-lesson-player">
+                    <div class="bd-lesson-video-wrap">
+                        <div class="bd-lesson-video-title-wrap">
+                            <div class="bd-lesson-video-title-wrap-left">
+                                <span>Complete Guide to HTML: Beginner to Advanced</span>
+                            </div>
+                            <button asp-action="Courses" asp-controller="Home"
+                                    class="btn btn-secondary btn-lg">
+                                <i class="fa-solid fa-arrow-left me-2"></i> Back to Courses
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="bd-lesson-about">
+                        <div class="bd-lesson-next-prev-button">
+                            <button id="prevBtn" class="prev-button"><i class="fa-solid fa-arrow-left"></i></button>
+                            <button id="nextBtn" class="next-button" title="Setting up your development environment">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="tab-style-two">
+                            <ul class="nav nav-pills" id="pills-tabTwo" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-homeTwo-tab" data-bs-toggle="pill" data-bs-target="#pills-homeTwo" type="button" role="tab" aria-controls="pills-homeTwo" aria-selected="true">About Lesson</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profileTwo-tab" data-bs-toggle="pill" data-bs-target="#pills-profileTwo" type="button" role="tab" aria-controls="pills-profileTwo" aria-selected="false">Try it Yourself</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabTwoContent">
+                                <div class="tab-pane fade show active" id="pills-homeTwo" role="tabpanel" aria-labelledby="pills-homeTwo-tab" tabindex="0">
+                                    <main id="main" class="site-main">
+                                        <div id="lessonContent">
+                                        </div>
+                                    </main>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profileTwo" role="tabpanel" aria-labelledby="pills-profileTwo-tab" tabindex="0">
+                                    <div class="wrapper">
+                                        <div class="editor">
+                                            <div class="editor__code">
+                                                <div id="editor" style="height:400px;border:1px solid #ccc;"></div>
+                                            </div>
+                                            <div class="buttons">
+                                                <button onclick="runCode()">Run</button>
+                                            </div>
+                                            <div class="editor__preview">
+                                                <iframe id="resultFrame" frameborder="0" style="width:100%;height:300px;border:1px solid #ccc;"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="backtotop-wrap cursor-pointer">
+        <svg class="backtotop-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <script src="~/assets/js/vendor/jquery-3.7.1.min.js"></script>
+
+    <script src="~/assets/js/plugins/waypoints.min.js"></script>
+    <script src="~/assets/js/vendor/bootstrap.bundle.min.js"></script>
+  
+
+    <script src="~/assets/js/plugins/swiper.min.js"></script>
+    <script src="~/assets/js/plugins/wow.js"></script>
+    <script src="~/assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="~/assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="~/assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/js/plugins/nice-select.min.js"></script>
+    <script src="~/assets/js/vendor/ajax-form.js"></script>
+    <script src="~/assets/js/vendor/purecounter.js"></script>
+    <script src="~/assets/js/plugins/nouislider.min.js"></script>
+    <script src="~/assets/js/plugins/typed.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/plugins/swal.js"></script>
+    <script src="~/assets/js/monaco/vs/loader.js"></script>
+
+    <script>
+        let currentIndex = 1;
+        const totalLessons = 60;
+
+        function loadLesson(id) {
+            currentIndex = id;
+            fetch(`/Course/Lesson?id=${id}`)
+                .then(response => {
+                    if (!response.ok) throw new Error("Network error");
+                    return response.text();
+                })
+                .then(html => {
+                    document.getElementById("lessonContent").innerHTML = html;
+                    document.querySelectorAll(".bd-course-curriculum-content .title")
+                        .forEach(p => p.classList.remove("active"));
+                    const activePara = document.querySelector(`a[data-lesson='${id}'] .title`);
+                    if (activePara) {activePara.classList.add("active");
+                    const accordionBody = activePara.closest(".accordion-collapse");
+                if (accordionBody && !accordionBody.classList.contains("show")) {
+                    document.querySelectorAll(".accordion-collapse.show")
+                        .forEach(openAcc => {
+                            new bootstrap.Collapse(openAcc, { toggle: true });
+                        });
+                    new bootstrap.Collapse(accordionBody, { toggle: true });
+                }
+
+                    }
+                })
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("nextBtn").onclick = () => {
+                if (currentIndex < totalLessons) loadLesson(currentIndex + 1);
+            };
+
+            document.getElementById("prevBtn").onclick = () => {
+                if (currentIndex > 1) loadLesson(currentIndex - 1);
+            };
+            loadLesson(1);
+        });
+
+    </script>
+
+    <script>
+        const HTML_CODE = (`<h1>Welcome User</h1>`);
+
+        require.config({
+            paths: { vs: "https://cdn.jsdelivr.net/npm/monaco-editor/min/vs" }
+        });
+
+        window.MonacoEnvironment = {
+            getWorkerUrl: function (workerId, label) {
+                return `data:text/javascript;charset=utf-8,${encodeURIComponent(`
+                    self.MonacoEnvironment = {
+                        baseUrl: 'https://cdn.jsdelivr.net/npm/monaco-editor/min/'
+                    };
+                    importScripts('https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/base/worker/workerMain.js');`)}`;
+            }
+        };
+
+        require(["vs/editor/editor.main"], function () {
+            createEditor(document.getElementById("editor"));
+        });
+
+        function createEditor(editorContainer) {
+            window.editor = monaco.editor.create(editorContainer, {
+                value: HTML_CODE,
+                language: "html",
+                theme: "vs-dark",
+                minimap: { enabled: false },
+                automaticLayout: true,
+                contextmenu: false,
+                fontSize: 12,
+            });
+        }
+        function runCode() {
+            const code = window.editor.getValue();
+            document.getElementById("resultFrame").srcdoc = code;
+        }
+    </script>
+
+    <script>
+        function copyCode(elementId) {
+            var code = document.getElementById(elementId).innerText;
+
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Code copied");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+</body>
+
+</html>

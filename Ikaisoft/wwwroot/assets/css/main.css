@@ -1000,6 +1000,9 @@ textarea:focus {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.section-space-course {
+    padding-top: 50px;
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-space {
     padding-top: 80px;
